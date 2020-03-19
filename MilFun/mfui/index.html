@@ -2,9 +2,29 @@
 <html>
 <head>
 	<title>MilFun UI</title>
+	
 </head>
 <body>
-	<h1>MilFun UI</h1>
-	<p>Welcome ! Now start your project with MiasdaslFun UI</p>
+	<div id="app">
+		<h1>MilFun UI</h1>
+		<button-counter></button-counter>
+		<p>Welcome {{name}}! Now start your project with MiasdaslFun UI</p>
+	</div>
+
 </body>
+<script src="src/js/vue.js"></script>
+<script src="src/js/index.js"></script>
+<!-- <script src="src/js/modules/button.vue"></script> -->
+<script>
+	milfun.use('button',function(){
+		var vm = new Vue({
+		// 选项
+			el:'#app',
+			data:{
+				name:"MilFun"
+			}
+		})
+	})
+	
+</script>
 </html>
