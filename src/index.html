@@ -2,29 +2,72 @@
 <html>
 <head>
 	<title>MilFun UI</title>
-	
+	<link rel="stylesheet" type="text/css" href="dist/milfun.css">
+	<style type="text/css">
+		
+	</style>
 </head>
 <body>
-	<div id="app">
-		<h1>MilFun UI</h1>
-		<button-counter></button-counter>
-		<p>Welcome {{name}}! Now start your project with MiasdaslFun UI</p>
+	<!-- <div id="drag" class=" milfun-chat">
+		<div class="milfun-chat-head">
+			<div class="milfun-chat-headimg">
+				<img src="//tva3.sinaimg.cn/crop.0.0.180.180.180/7f5f6861jw1e8qgp5bmzyj2050050aa8.jpg">
+			</div>
+			<div class="milfun-chat-username"></div>
+		</div>
+		<div class="milfun-chat-body">
+			<div class="milfun-chat-msg">
+				
+			</div>
+		</div>
+		<div class="milfun-chat-foot">
+			<div class="milfun-chat-tool">
+				<span>😁</span>
+				<span>🎞</span>
+				<span>🚟</span>
+				<span>🎧</span>
+				<span>🎼</span>
+				<span class="milfun-chat-log">聊天记录</span>
+			</div>
+			<div class="milfun-chat-input">
+				<textarea></textarea>
+			</div>
+			<div class="milfun-chat-button">
+				<span>关闭</span>
+				<span>发送</span>
+			</div>
+		</div>
+	</div> -->
+
+	<div id="drag" class=" milfun-im">
+		<div class="milfun-chat-head">
+			<div class="milfun-im-info">
+				<p>纸飞机</p>
+				<input class="milfun-im-remark" placeholder="编辑签名" value="在深邃的编码世界，做一枚轻盈的纸飞机">
+			</div>
+			<div class="milfun-chat-username"></div>
+		</div>
+		<div class="milfun-chat-body">
+			<div class="milfun-chat-msg">
+				
+			</div>
+		</div>
+		<div class="milfun-chat-foot">
+			
+			<div class="milfun-chat-tool">
+				<span>😁</span>
+				<span>🎞</span>
+				<span>🚟</span>
+				<span>🎧</span>
+				<span>🎼</span>
+			</div>
+		</div>
 	</div>
 
 </body>
-<script src="src/js/vue.js"></script>
+
 <script src="src/js/index.js"></script>
+<script src="src/js/drag.js"></script>
 <!-- <script src="src/js/modules/button.vue"></script> -->
-<script>
-	milfun.use('button',function(){
-		var vm = new Vue({
-		// 选项
-			el:'#app',
-			data:{
-				name:"MilFun"
-			}
-		})
-	})
-	
-</script>
+
 </html>

@@ -9,7 +9,7 @@ module.exports = {
      * 项目相关部分代码，复制后应首先进行这些配置
      *
      */
-    'project': 'MilFun UI',
+    'project': 'MilFunUI',
     'prefix': 'dm',
     'resultCssFileName': 'app.scss',
     'srcPath' : 'src',
@@ -21,6 +21,7 @@ module.exports = {
      */
     'paths': {
         'jsPath': 'src/js',
-        'stylePath': 'src/style'
+        'stylePath': 'src/style/',
+        'destPath':'dist',
     },
 }

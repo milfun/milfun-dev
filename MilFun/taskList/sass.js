@@ -11,7 +11,7 @@ module.exports = (gulp, milfun) => {
 	const rename = require('gulp-rename');
 	const plumber = require('gulp-plumber');
 	// 需要遍历的文件
-	const sourceArr = [milfun.config.paths.stylePath + '/**/*.scss'];
+	const sourceArr = [milfun.config.paths.stylePath + 'milfun.scss'];
 
 	const taskName = 'sass';
 	gulp.task(taskName, (done) => {
@@ -19,9 +19,9 @@ module.exports = (gulp, milfun) => {
 		milfun.util.log('Sass', ' Scss To Wxss 进入自动转化...');
 		src(sourceArr)
 		.pipe(plumber())
-	 //    .pipe(gsass()) // Using gulp-sass
-	 //    .pipe(rename((path) => path.extname = '.css'))
-		// .pipe(dest(milfun.config.destPath))
+	    .pipe(gsass()) // Using gulp-sass
+	    .pipe(rename((path) => path = 'app.css'))
+		.pipe(dest(milfun.config.destPath))
 		.pipe(milfun.browser.reload({stream: true}))
 		milfun.util.log('Sass', ' Scss To css 转化完成！');
 		done();
