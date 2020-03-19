@@ -2,7 +2,7 @@
 * @Author: MilFun
 * @Date:   2019-11-22 09:46:15
 * @Last Modified by:   milfun
-* @Last Modified time: 2020-03-19 12:12:41
+* @Last Modified time: 2020-03-19 13:53:33
 */
 // 创建一个新项目
 const fs = require('fs');
@@ -39,13 +39,17 @@ module.exports = (gulp, milfun) => {
 	    // .pipe(sass()) // Using gulp-sass
 	    .pipe(rename((path) => path.extname = '.scss'))
 	    .pipe(dest(milfun.config.paths.stylePath))
-	    milfun.util.log('Pull', milfun.packageInfo.name + 'get scss done , please code it in src/style/milfun.scss');
 
 	    // // 复制拉取 html 文件
-	    src('MilFun/mfui/*.html')
+	    src('MilFun/mfui/**/*.html')
 	    .pipe(dest(milfun.config.srcPath))
-	    milfun.util.log('Pull', milfun.packageInfo.name + 'get html done , please code it in src/index.html');
+	    milfun.util.log('\n')
+
+	    // // 复制拉取 html 文件
+	    src('MilFun/mfui/**/*.js')
+	    .pipe(dest(milfun.config.paths.jsPath))
 	    milfun.util.log('Init', ' All Done！');
+	    milfun.util.log('Pull', milfun.packageInfo.name + 'get html done , please code it in src/');
 	    milfun.util.log('\n')
 	 	
 	 	// // 启动serve热更新
