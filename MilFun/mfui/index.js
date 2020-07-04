@@ -30,6 +30,9 @@
         script.onload = function (){ fn(); }
         d.getElementsByTagName('head')[0].appendChild(script);
     }
+    milfun.prototype.component = function(data,temp){
+        
+    }
     e.milfun = new milfun
 }(window)
 

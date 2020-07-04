@@ -4,70 +4,56 @@
 	<title>MilFun UI</title>
 	<link rel="stylesheet" type="text/css" href="dist/milfun.css">
 	<style type="text/css">
-		
+		h3{margin: 20px 0;}
+		a,span{margin: 0 10px;}
 	</style>
 </head>
 <body>
-	<!-- <div id="drag" class=" milfun-chat">
-		<div class="milfun-chat-head">
-			<div class="milfun-chat-headimg">
-				<img src="//tva3.sinaimg.cn/crop.0.0.180.180.180/7f5f6861jw1e8qgp5bmzyj2050050aa8.jpg">
-			</div>
-			<div class="milfun-chat-username"></div>
-		</div>
-		<div class="milfun-chat-body">
-			<div class="milfun-chat-msg">
-				
-			</div>
-		</div>
-		<div class="milfun-chat-foot">
-			<div class="milfun-chat-tool">
-				<span>😁</span>
-				<span>🎞</span>
-				<span>🚟</span>
-				<span>🎧</span>
-				<span>🎼</span>
-				<span class="milfun-chat-log">聊天记录</span>
-			</div>
-			<div class="milfun-chat-input">
-				<textarea></textarea>
-			</div>
-			<div class="milfun-chat-button">
-				<span>关闭</span>
-				<span>发送</span>
-			</div>
-		</div>
-	</div> -->
-
-	<div id="drag" class=" milfun-im">
-		<div class="milfun-chat-head">
-			<div class="milfun-im-info">
-				<p>纸飞机</p>
-				<input class="milfun-im-remark" placeholder="编辑签名" value="在深邃的编码世界，做一枚轻盈的纸飞机">
-			</div>
-			<div class="milfun-chat-username"></div>
-		</div>
-		<div class="milfun-chat-body">
-			<div class="milfun-chat-msg">
-				
-			</div>
-		</div>
-		<div class="milfun-chat-foot">
-			
-			<div class="milfun-chat-tool">
-				<span>😁</span>
-				<span>🎞</span>
-				<span>🚟</span>
-				<span>🎧</span>
-				<span>🎼</span>
-			</div>
-		</div>
+	<!-- 链接 -->
+	<div class="docker">
+		<h3>链接样式:tc-link</h3>
+		<a class="tc-link">默认</a>
+		<a class="tc-link white">白色-蓝色</a>
+		<a class="tc-link red">黑色-红色</a>
 	</div>
 
+	<!-- 按钮 -->
+	<div class="docker">
+		<h3>按钮样式:tc-btn</h3>
+		<a class="tc-btn">你好呀</a>
+		<a class="tc-btn primary">primary</a>
+		<a class="tc-btn outline">登陆/注册outline</a>
+		<a class="tc-btn normal">热招职位normal</a>
+		<a class="tc-btn primary large">查看更多primary large</a>
+	</div>
+
+	<div class="docker">
+		<div id="tc-card"></div>
+	</div>
+
+	<!-- 按钮 -->
+
+	
 </body>
-
+<script src="src/js/jquery.js"></script>
 <script src="src/js/index.js"></script>
-<script src="src/js/drag.js"></script>
-<!-- <script src="src/js/modules/button.vue"></script> -->
+<script>
+	// $('#tc-cell').html = 
+	let tmp = milfun.render('cell',{
+		title:'你好呀',
+		value:'10-15K',
+		label:'福建 · 3-5年 · 本科'
+	})
+	$('#tc-cell').html(tmp)
 
+	let tmps = milfun.render('card',{
+		title:'你好呀',
+		value:'10-15K',
+		label:'福建 · 3-5年 · 本科',
+		logo:'http://wzdx.top/img/head.jpg',
+		rightImg:'http://wzdx.top/img/head.jpg',
+		company:'米饭联盟'
+	})
+	$('#tc-card').html(tmps)
+</script>
 </html>

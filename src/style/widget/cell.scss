@@ -1,0 +1,90 @@
+.tc-cell{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	& .head{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		// margin-right: 24rpx;
+		// @include border;
+		& .cell-icon{
+			margin-right: 10rpx;
+		}
+		& .cell-image{
+			display: flex;
+
+			position: relative;
+			
+			& .badge{
+				position: absolute;
+				right: 15rpx;
+			}
+		}
+	}
+	& .body{
+		display: flex;
+		flex-direction: column;
+		
+		margin-right: auto;
+		flex:1;
+		
+		& .body-one{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			line-height: 40rpx;
+			// white-space: nowrap;
+			
+			box-sizing: border-box;
+			& .title{
+				align-items: center;
+				display: inline-flex;
+
+				// width: calc(100% - 100rpx);
+				max-width: 460rpx;
+				white-space: nowrap;
+			}
+			
+			& .tag{
+				display: inline-flex;
+				display: flex;
+				flex-direction: row;
+				font-weight: normal;
+				margin-left: 10rpx;
+			}
+			& .value{
+				display: inline-flex;
+				flex-direction: row;
+				align-items: center;
+				margin-left: auto;
+			}
+		}
+		& .body-two{
+			display: flex;
+			flex-direction: flex-start;
+			align-items: center;
+			// padding: 10rpx 0;
+			& .label{
+				flex: 1;
+				max-width: 500rpx;
+				overflow: hidden;/*超出部分隐藏*/
+				white-space: nowrap;/*不换行*/
+				text-overflow:ellipsis;
+			}
+			& .note{
+				display: inline-flex;
+				margin-left: auto;
+				right: 0;
+			}
+		}
+	}
+}
+.cell-center{
+	align-items: center;
+	justify-content: center;
+}

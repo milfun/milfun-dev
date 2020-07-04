@@ -1,0 +1,30 @@
+/*
+* @Author: MilFun
+* @Date:   2020-03-19 12:14:18
+* @Last Modified by:   milfun
+* @Last Modified time: 2020-03-19 12:15:36
+*/
+@import "../_var";
+
+.tc-link{
+    color: $gray;
+    cursor: pointer;
+    &:hover{
+        color: $color;
+        transition: all linear .2s;
+    }
+    &.white{
+        color: $white;
+        &:hover{
+            color: $color;
+            transition: all linear .2s;
+        }
+    }
+    &.red{
+        color: $black;
+        &:hover{
+            color: $red;
+            transition: all linear .2s;
+        }
+    }
+}
